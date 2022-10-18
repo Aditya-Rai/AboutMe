@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=image.0">
+    <title>Grid tutorial</title>
+
+    <style>
+        body {
+            color: black;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+            margin: 10px 10px;
+        }
+
+        .dtr {
+            /* border: 2px solid rgb(0, 0, 0); */
+            background-color: rgb(221, 243, 242);
+            border-radius: 30px;
+            box-shadow: inset 9px 9px 30px 9px rgb(95, 95, 95);
+
+        }
+
+        /* @media (max-width: 300px) {} */
+
+        @media (max-width: 480px) {
+            .image {
+                height: 900px;
+                /* display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(10deg, rgb(183, 236, 236) 50%, rgb(18, 218, 218) 30%)
+                    /* border: 1px solid rgb(173, 238, 238); */
+                    /* border-radius: 632px 220px 632px 220px; */
+                /* ;  */
+            }
+            body{
+                background-color: aqua;
+            }
+
+            img {
+                height: 250px;
+                width: 250px;
+            }
+
+            
+        }
+
+        /* 
+        @media (min-width: 700px) and (max-width: 1100px) {}
+
+        @media (min-width: 1100px) {} */
+
+        nav {
+            grid-area: navbar;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+
+
+        #footer {
+            text-align: center;
+            height: 40px;
+            /* width: 1220px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 2px;
+            text-align: left;
+            padding: 10px 10px;
+            width: 380px;
+            margin: 10px 465px;
+
+        }
+
+        span {
+            text-align: left;
+            padding: 5px 10px;
+            /* border: 2px solid red; */
+            border-radius: 20px;
+        }
+
+        span:hover {
+            background: rgb(214, 178, 178);
+            color: black;
+            cursor: pointer;
+
+        }
+
+        p {
+            font-weight: bold;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 1px wheat;
+        }
+
+        h2 {
+            padding: 10px 25px;
+        }
+
+        .image {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(10deg, rgb(183, 236, 236) 50%, rgb(18, 218, 218) 30%)
+                /* border: 1px solid rgb(173, 238, 238); */
+                /* border-radius: 632px 220px 632px 220px; */
+        }
+
+        img {
+            height: 120px;
+            width: 120px;
+            padding: 20px 0px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 27px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgb(207, 176, 164);
+
+        }
+
+        em {
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-style: normal;
+            text-shadow: 2px 2px 2px gold;
+        }
+
+        /* #aside-about{
+            height: 700px;
+            width: 250px;
+        }
+        #section-contain{
+            height: 700px;
+            width: 807px;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="image">
+        <img src="logo.png" alt="">
+        <a href="#" class="name"><em>Z</em>enil <em>P</em>atel</a>
+    </div>
+    <div class="container">
+
+        <nav id="navbar" class="dtr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact Us</span>
+        </nav>
+        <aside class="dtr" id="aside-about">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sunt quas odio, rerum veritatis atque!
+                Numquam suscipit, nemo natus quo officia odio sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem pariatur tenetur veritatis obcaecati
+                nulla neque beatae. Impedit provident eius eum illo nihil laborum nisi minus, quisquam accusantium
+                deserunt cupiditate neque.</p>
+
+        </aside>
+        <section class="dtr" id="section-contain">
+            <h2>Get Knowledge!!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, maiores! Temporibus et fugiat eum ipsam
+                in! Et voluptatibus id dolorum? Ducimus magni optio ad pariatur voluptatem. Eaque quas dignissimos culpa
+                debitis ullam obcaecati iste sit animi. Ea iste veritatis laboriosam est! Fugit voluptatem facilis
+                adipisci. Cumque eveniet, accusamus qui voluptates, incidunt aliquid vel nulla ratione a omnis fugiat
+                consequuntur nam minima delectus. Nesciunt adipisci deserunt ad quidem error debitis provident
+                architecto cum sint! Itaque maiores molestias accusantium debitis at voluptatibus tempora eos adipisci,
+                et sit facere, possimus nostrum ducimus perferendis similique quas. Facilis nihil laborum ducimus quas,
+                obcaecati fugiat asperiores consectetur praesentium deleniti quibusdam! Ducimus at, doloribus natus
+                alias culpa fugit eos, numquam eligendi ut illum illo pariatur possimus ullam, sunt omnis veritatis
+                aliquam impedit dicta quam labore. Repellendus recusandae quibusdam voluptates fugiat quia temporibus
+                vero excepturi quam quod numquam error dignissimos ratione veritatis fuga accusantium soluta dolorem
+                nobis, rem nam molestias. Nisi nostrum qui quas vel impedit repudiandae et repellendus neque in odit
+                nulla, pariatur incidunt dicta quo! Ex cupiditate delectus facilis neque officia dolorem adipisci,
+                voluptatem assumenda pariatur asperiores omnis commodi est veniam esse velit enim incidunt illo saepe
+                dolore fugit a eveniet eligendi magnam soluta. Sequi, magni, at, fuga accusantium nesciunt excepturi
+                impedit illum tenetur natus beatae deleniti incidunt id repellendus nostrum possimus sit fugit molestias
+                soluta provident voluptate? Corporis recusandae accusantium, rerum aliquam velit hic quo!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime aut cum nemo eos numquam, quidem
+                consequatur dolorem perspiciatis placeat? Animi, esse eaque accusamus distinctio temporibus eum
+                inventore ratione quia ipsam dolor quaerat aliquam architecto dicta hic. Tempora aliquid, dolore atque
+                nulla laudantium explicabo error at vero dolorum blanditiis possimus quisquam officia aliquam eos
+                aspernatur magnam eum similique praesentium architecto sit, distinctio a minima perspiciatis? Tempora
+                excepturi vero porro suscipit veniam possimus aut numquam fugiat itaque mollitia, id animi vitae ullam
+                maiores nesciunt, placeat nostrum harum aliquam quas labore alias natus qui. Laudantium voluptatem,
+                aspernatur nihil distinctio tenetur cumque atque praesentium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum necessitatibus architecto accusamus,
+                nemo fuga excepturi modi a minus quis amet ipsam. Eveniet nam ullam non? Enim, molestiae et assumenda ut
+                tempora nisi laudantium, laboriosam officia corrupti sapiente possimus nostrum quisquam eum culpa
+                temporibus voluptatibus accusantium fuga animi vel impedit repudiandae.</p>
+        </section>
+
+        <footer id="footer" class="dtr">
+            Copyright &copy; Zenil Patel 2022
+        </footer>
+
+    </div>
+</body>
+
+</html>
